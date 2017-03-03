@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/home_entry_item_normal" >
+    <!-- 手机空间显示图 -->
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <!-- 饼型图 -->
+        <edu.feicui.app.phone.view.PiechartView 
+            android:id="@+id/piechart"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/piechart"
+            android:orientation="vertical">          
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <View 
+                    style="@style/soft_piechar_icon"
+                    android:background="@color/piechar_phone"/>
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/space_phone"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+            <!-- 相当于空白键 -->
+            <View 
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="invisible"/>
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <View 
+                    style="@style/soft_piechar_icon"
+                    android:background="@color/piechar_sdcard"/>
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/space_sdcard"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>            
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 手机进度条 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/app_listitem_horizontal_margin"
+        android:paddingRight="@dimen/app_listitem_horizontal_margin"
+        android:paddingBottom="@dimen/app_listitem_horizontal_margin">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/space_phone"/>
+        <!-- progressBarStyleHorizontal安卓底层样式 ?是固定格式 -->
+        <ProgressBar 
+            android:id="@+id/pb_phone_space"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:progressDrawable="@drawable/progressbar_phone_space"
+            android:max="100"
+            android:progress="20"/>
+        <TextView 
+            android:id="@+id/tv_phone_space_msg"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="200MB/1000MB"/>
+    </LinearLayout>
+    <!-- sd空间进度 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/app_listitem_horizontal_margin"
+        android:paddingRight="@dimen/app_listitem_horizontal_margin"
+        android:paddingBottom="@dimen/app_listitem_horizontal_margin">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/space_sdcard"/>
+        <!-- progressBarStyleHorizontal安卓底层样式 ?是固定格式 -->
+        <ProgressBar 
+            android:id="@+id/pb_sdcard_space"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:progressDrawable="@drawable/progressbar_phone_space"
+            android:max="100"
+            android:progress="0"/>
+        <TextView 
+            android:id="@+id/tv_sdcard_space_msg"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:text="0MB/1000MB"/>
+    </LinearLayout>
+</LinearLayout>

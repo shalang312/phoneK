@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SoftmgrAppshowActivity" 
+    android:orientation="vertical">
+	<edu.feicui.app.phone.view.ActionBarView 
+	    android:id="@+id/actionbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0"/>
+	<include layout="@layout/layout_listitem"
+	    android:layout_weight="1"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="0"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:orientation="horizontal">
+	    <CheckBox 
+	        android:id="@+id/cb_all"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"/>
+	    <Button
+	    android:id="@+id/btn_delall"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/speedup_showapp_height"
+	    android:layout_weight="0"
+	    android:background="@drawable/btn_float"
+	    android:text="@string/showapp_delapp"
+	    android:textColor="@color/white" />
+	</LinearLayout>	
+</LinearLayout>

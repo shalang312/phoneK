@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity" 
+    android:orientation="vertical">
+	
+	<edu.feicui.app.phone.view.ActionBarView 
+	    android:id="@+id/actionbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">	    
+	</edu.feicui.app.phone.view.ActionBarView>
+	
+	<include layout="@layout/layout_homesrocess"/>
+	
+	<include layout="@layout/layout_home"/>	
+</LinearLayout>

@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SoftmgrActivity" 
+    android:orientation="vertical"
+    android:background="@color/white">
+	<edu.feicui.app.phone.view.ActionBarView 
+	    android:id="@+id/actionbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+	<include layout="@layout/layout_sofmgr_spacemen"/>
+	<ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    <include layout="@layout/layout_softmgr_listitem"/>
+	</ScrollView>
+</LinearLayout>

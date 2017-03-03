@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <!-- 主页面TextView的Style -->
+    <style name="homeitem">
+        <item name="android:contentDescription">主页面TextView的Style</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/home_entry_item</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/home_item_textsize</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">hitHomeitem</item>
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+	<!-- 设置页面每个item -->
+	<style name="setting_item">
+	    <item name="android:contentDescription">设置页面每个item的Style</item>
+	    <item name="android:clickable">true</item>
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">@dimen/set_item_height</item>
+	    <item name="android:background">@drawable/home_entry_item</item>
+	    <item name="android:onClick">hitSettingitem</item>
+	</style>
+	<!-- item里TextView风格 -->
+	<style name="setting_item_head">
+	    <item name="android:contentDescription">设置页面每个item头标题Style</item>
+	    <item name="android:layout_alignParentLeft">true</item>
+	    <item name="android:layout_centerVertical">true</item>
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">@dimen/set_item_textsize</item>
+	    <item name="android:textStyle">bold</item>
+	    <item name="android:textColor">#FF000000</item>
+	    <item name="android:layout_marginLeft">10dip</item>
+	</style>
+	<!-- item里右边箭头样式 -->
+	<style name="setting_item_head_icon">
+	    <item name="android:layout_alignParentRight">true</item>
+	    <item name="android:layout_centerVertical">true</item>
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_marginRight">10dp</item>
+	    <item name="android:src">@drawable/ic_arrows_right</item>
+	</style>
+	<!-- item里右边ToggleButton样式 -->
+	<style name="setting_item_head_icon_toggle" parent="setting_item_head_icon">
+	    <item name="android:background">@drawable/check_switch</item>
+	    <item name="android:textOff"></item>
+	    <item name="android:textOn"></item>
+	</style>
+	<!-- 饼型图 -->
+	<style name="soft_piechar">
+	    <item name="android:layout_width">@dimen/softmgr_piechar_width</item>
+	    <item name="android:layout_height">@dimen/softmgr_piechar_height</item>
+	</style>
+	<!-- 饼型图icon -->	
+	<style name="soft_piechar_icon">
+	    <item name="android:layout_width">@dimen/softmgr_piechar_icon_width</item>
+	    <item name="android:layout_height">@dimen/softmgr_piechar_icon_height</item>
+	</style>
+	<!-- 软件页面中列表风格（软件管理？文件管理） -->	
+	<style name="app_listitem">
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">@dimen/app_listitem_height</item>
+	    <item name="android:background">@drawable/home_entry_item</item>
+	    <item name="android:clickable">true</item>
+	    <item name="android:onClick">hitListitem</item>
+	</style>
+	<!-- 软件页面列表中字体格式 -->
+	<style name="app_listitem_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/app_listitem_textsize</item>
+        <item name="android:layout_marginLeft">@dimen/app_listitem_horizontal_margin</item>
+    </style>
+    <!-- 软件页面中列表项右侧图标 -->
+    <style name="app_listitem_righticon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/ic_arrows_right</item>
+        <item name="android:layout_marginRight">@dimen/app_listitem_horizontal_margin</item>
+    </style>
+    <!-- 透明的水平线（分隔线） -->
+    <style name="line_h_transparent">
+        <item name="android:background">#00FFFFFF</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dip</item>
+    </style>
+    <!-- 软件管理 -->
+    <style name="app_listitem_text_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/app_listitem_textsize_small</item>
+        <item name="android:layout_marginLeft">@dimen/app_listitem_horizontal_margin</item>
+    </style>
+    <style name="app_listitem_righticon_loading"
+        parent="@android:attr/progressBarStyleSmall">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/app_listitem_horizontal_margin</item>
+    </style>
+    
+</resources>

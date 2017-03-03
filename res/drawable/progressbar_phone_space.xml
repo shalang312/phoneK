@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- layer-list 有覆盖效果的  shape画图形，默认为矩形 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/background">
+        <shape >
+            <corners 
+                android:radius="30dp"/>
+            	<solid android:color="@color/piechar_progressbar_bg"/>
+        </shape>
+    </item>
+    <item android:id="@+id/progress">
+        <clip >
+            <shape>
+                <corners android:radius="30dp"/>
+                <solid android:color="@color/piechar_phone"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>
